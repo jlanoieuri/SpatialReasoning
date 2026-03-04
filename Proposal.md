@@ -1,5 +1,6 @@
 ---
 title: A "Common Sense" Spatial Reasoning Benchmark for Multimodal Language Models
+
 exports:
     - format: pdf
       template: arxiv_nips
@@ -11,11 +12,19 @@ authors:
   - name: Ethen Puls
     affiliations:
       - University of Rhode Island
-abstract: |
-    abstract text...
----
+  - name: Alex
+    affiliations:
+      - University of Rhode Island
+  - name: Jack
+    affiliations:
+      - University of Rhode Island
+  - name: Cody
+    affiliations:
+      - University of Rhode Island
 
+---
 # Introduction
+
 # Concept & Operationalization
 This benchmark will have several exercises to measure LLM's ability to use common-sense spatial reasoning. We define common-sense reasoning as the ability to correctly infer relative orientation, rotation, and spatial displacement of objects under geometric transformations, using either textual descriptions alone or text grounded in visual input. This includes; mental rotation, relative positioning, directional movement inference, and transformation composition. 
 * *Mental transformation* is the ability to infer an object orientation after rotation, sequential composition of transformation. This includes both single-step transformations (e.g., rotate 90° clockwise) and sequential composition of transformations (e.g., rotate 90° clockwise and then 180°). Correctly completing these types of exercises requires maintaining an internal representation of orientation and correctly updating it under rule-based operations.
