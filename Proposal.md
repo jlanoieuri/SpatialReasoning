@@ -18,7 +18,7 @@ authors:
   - name: Jack Lanoie
     affiliations:
       - University of Rhode Island
-  - name: Cody Giroux
+  - name: Cody Giroux0
     affiliations:
       - University of Rhode Island
 
@@ -35,6 +35,7 @@ This benchmark will have several exercises to measure LLM's ability to use commo
 * *Relative positioning* is the ability to define an object’s spatial location with respect to another object or reference point. For example, in the statement “The ball is to the left of the chair.”, the model must correctly interpret directional relationships within a shared coordinate frame. This includes reasoning about object-centered versus global reference frames and maintaining consistency when the reference object changes.
 * *Directional movement* is the ability to interpret and apply movement commands, such as up, forward, clockwise, or counterclockwise. These tasks require mapping keywords to geometric operations and updating positional states accordingly. Movement reasoning may involve translating a point across a grid, following the direction of an arrow, or applying rotation to a facing object.
 * *Transformation composition* is the ability to apply multiple spatial transformations sequentially to one object and identify its final state. This tests whether the models are  performing true compositional reasoning or relying on shallow pattern recognition. For example, combining rotation and translation requires maintaining intermediate state representations and applying transformation rules in order.
+
 Including these four categories of capabilities will evaluate whether a model maintains internally consistent spatial representations that are stable across textual and visual modalities.
 Our tasks for this benchmark will be split into two types of exercises; text-only spatial reasoning tasks and image + text multimodal tasks. Each task will have a standardized input-output structure, meaning that all tasks will follow a uniform prompt template. Each task will explicitly instruct the model to select a single-word answer from a predefined answer bank.
 This benchmark will test models performance on these topics using various exercises. We will construct it as a controlled benchmark composed of discrete tasks across multimodal settings. Each task will evaluate a specific skill under the large umbrella of spatial reasoning.  By using this benchmark, we will evaluate how effectively large language models understand and manipulate physical space layouts, and object relationships. 
