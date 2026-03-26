@@ -1,0 +1,46 @@
+------ prompt ------
+Given the following directional faces of a numerical die and the values on those directional faces {Front: 3, Back: 4, Up: 5, Down: 2, Left: 1, Right: 6}, what are the values on the directional faces after the following transformations? {rotate top face 180 degrees, rotate right face 90 degrees clockwise} Respond in the format that was used to provide the initial state of the die.
+
+------ response ------
+Here's the breakdown of the transformations and the resulting face values:
+
+**Initial State:**
+
+*   Front: 3
+*   Back: 4
+*   Up: 5
+*   Down: 2
+*   Left: 1
+*   Right: 6
+
+**Transformation 1: Rotate Top Face 180 Degrees**
+
+Rotating the 'Up' face 180 degrees changes the faces that were previously 'Up' to 'Down' and vice versa.
+
+*   Front: 3
+*   Back: 4
+*   Up: 2
+*   Down: 5
+*   Left: 1
+*   Right: 6
+
+**Transformation 2: Rotate Right Face 90 Degrees Clockwise**
+
+Rotating the 'Right' face 90 degrees clockwise changes the faces that were previously 'Right' to 'Front' and vice versa.
+
+*   Front: 6
+*   Back: 4
+*   Up: 2
+*   Down: 5
+*   Left: 1
+*   Right: 3
+
+**Final State:**
+
+*   Front: 6
+*   Back: 4
+*   Up: 2
+*   Down: 5
+*   Left: 1
+*   Right: 3
+

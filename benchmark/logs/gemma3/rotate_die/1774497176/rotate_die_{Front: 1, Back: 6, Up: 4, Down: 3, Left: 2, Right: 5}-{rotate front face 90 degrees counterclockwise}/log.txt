@@ -1,0 +1,35 @@
+------ prompt ------
+Given the following directional faces of a numerical die and the values on those directional faces {Front: 1, Back: 6, Up: 4, Down: 3, Left: 2, Right: 5}, what are the values on the directional faces after the following transformations? {rotate front face 90 degrees counterclockwise} Respond in the format that was used to provide the initial state of the die.
+
+------ response ------
+Okay, let's apply the 90-degree counterclockwise rotation to the die's faces and update the values.
+
+**Initial State:**
+
+*   Front: 1
+*   Back: 6
+*   Up: 4
+*   Down: 3
+*   Left: 2
+*   Right: 5
+
+**Transformation: Rotate Front Face 90 degrees counterclockwise**
+
+When the front face rotates 90 degrees counterclockwise, the following changes occur:
+
+*   **Front** becomes **Left** (value remains 1)
+*   **Back** becomes **Up** (value remains 6)
+*   **Up** becomes **Right** (value remains 4)
+*   **Down** becomes **Front** (value remains 3)
+*   **Left** becomes **Back** (value remains 2)
+*   **Right** becomes **Down** (value remains 5)
+
+**Final State:**
+
+*   Front: 1
+*   Back: 6
+*   Up: 4
+*   Down: 3
+*   Left: 2
+*   Right: 5
+

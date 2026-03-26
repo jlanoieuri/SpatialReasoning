@@ -1,0 +1,12 @@
+{
+    "task_name": "rotate_die",
+    "template": "Given the following directional faces of a numerical die and the values on those directional faces {starting_state}, what are the values on the directional faces after the following transformations? {transformations} Respond in the format that was used to provide the initial state of the die.",
+    "prompt_name": "rotate_die_{Front: 1, Back: 6, Up: 4, Down: 3, Left: 2, Right: 5}-{rotate front face 90 degrees counterclockwise}",
+    "error": "None",
+    "steps": {
+        "0": {
+            "prompt": "Given the following directional faces of a numerical die and the values on those directional faces {Front: 1, Back: 6, Up: 4, Down: 3, Left: 2, Right: 5}, what are the values on the directional faces after the following transformations? {rotate front face 90 degrees counterclockwise} Respond in the format that was used to provide the initial state of the die.",
+            "response": "Okay, let's apply the 90-degree counterclockwise rotation to the die's faces and update the values.\n\n**Initial State:**\n\n*   Front: 1\n*   Back: 6\n*   Up: 4\n*   Down: 3\n*   Left: 2\n*   Right: 5\n\n**Transformation: Rotate Front Face 90 degrees counterclockwise**\n\nWhen the front face rotates 90 degrees counterclockwise, the following changes occur:\n\n*   **Front** becomes **Left** (value remains 1)\n*   **Back** becomes **Up** (value remains 6)\n*   **Up** becomes **Right** (value remains 4)\n*   **Down** becomes **Front** (value remains 3)\n*   **Left** becomes **Back** (value remains 2)\n*   **Right** becomes **Down** (value remains 5)\n\n**Final State:**\n\n*   Front: 1\n*   Back: 6\n*   Up: 4\n*   Down: 3\n*   Left: 2\n*   Right: 5"
+        }
+    }
+}
