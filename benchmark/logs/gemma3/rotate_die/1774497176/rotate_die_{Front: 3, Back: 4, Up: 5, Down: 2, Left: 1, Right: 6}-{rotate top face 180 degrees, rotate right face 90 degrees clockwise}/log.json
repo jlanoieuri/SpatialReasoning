@@ -1,0 +1,12 @@
+{
+    "task_name": "rotate_die",
+    "template": "Given the following directional faces of a numerical die and the values on those directional faces {starting_state}, what are the values on the directional faces after the following transformations? {transformations} Respond in the format that was used to provide the initial state of the die.",
+    "prompt_name": "rotate_die_{Front: 3, Back: 4, Up: 5, Down: 2, Left: 1, Right: 6}-{rotate top face 180 degrees, rotate right face 90 degrees clockwise}",
+    "error": "None",
+    "steps": {
+        "0": {
+            "prompt": "Given the following directional faces of a numerical die and the values on those directional faces {Front: 3, Back: 4, Up: 5, Down: 2, Left: 1, Right: 6}, what are the values on the directional faces after the following transformations? {rotate top face 180 degrees, rotate right face 90 degrees clockwise} Respond in the format that was used to provide the initial state of the die.",
+            "response": "Here's the breakdown of the transformations and the resulting face values:\n\n**Initial State:**\n\n*   Front: 3\n*   Back: 4\n*   Up: 5\n*   Down: 2\n*   Left: 1\n*   Right: 6\n\n**Transformation 1: Rotate Top Face 180 Degrees**\n\nRotating the 'Up' face 180 degrees changes the faces that were previously 'Up' to 'Down' and vice versa.\n\n*   Front: 3\n*   Back: 4\n*   Up: 2\n*   Down: 5\n*   Left: 1\n*   Right: 6\n\n**Transformation 2: Rotate Right Face 90 Degrees Clockwise**\n\nRotating the 'Right' face 90 degrees clockwise changes the faces that were previously 'Right' to 'Front' and vice versa.\n\n*   Front: 6\n*   Back: 4\n*   Up: 2\n*   Down: 5\n*   Left: 1\n*   Right: 3\n\n**Final State:**\n\n*   Front: 6\n*   Back: 4\n*   Up: 2\n*   Down: 5\n*   Left: 1\n*   Right: 3"
+        }
+    }
+}
