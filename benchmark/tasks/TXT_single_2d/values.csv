@@ -3,3 +3,5 @@ arrow, right,90, clockwise
 arrow, left, 270, counterclockwise
 person, left, 180, clockwise
 person, down, 90, counterclockwise
+car, east, 180, clockwise
+airplane, northwest, 270, counterclockwise
