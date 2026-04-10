@@ -1,2 +1,5 @@
 object,direction,rotationamount,rotationaxis
 arrow, right,90, clockwise
+arrow, left, 270, counterclockwise
+person, left, 180, clockwise
+person, down, 90, counterclockwise
