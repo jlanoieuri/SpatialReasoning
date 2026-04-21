@@ -1,0 +1,13 @@
+system_prompt: |
+  Answer the following question(s) exclusively with a single answer from the answer bank.
+  Nothing else should be included in your response.
+
+  Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast, southwest, southeast
+
+scoring_functions:
+  - binary_match
+
+tags:
+  - 2d
+  - rotation
+  - single

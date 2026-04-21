@@ -1,0 +1,50 @@
+from typing import List
+from datetime import datetime
+from ollama_wrapper import ModelQuery
+from benchmark_types import Task, TaskResult, BenchmarkResult
+
+
+class BenchmarkRunner:
+    def __init__(self, model: str = 'gemma3', tasks: List[Task] = None):
+        self.model = model
+        self.tasks: List[Task] = tasks or []
+        self.result: BenchmarkResult = None
+
+    def run_benchmark(self, repeat_index: int = 0) -> BenchmarkResult:
+        task_results = []
+        for task in self.tasks:
+            query = ModelQuery(
+                model=self.model,
+                system_prompt=task.system_prompt,
+                role='user',
+                prompt_content=[task.prompt],
+            )
+            query.run_query()
+            response_text = query.responses[0].message.content
+            task_results.append(TaskResult(task=task, response=response_text))
+
+        self.result = BenchmarkResult(
+            model=self.model,
+            task_results=task_results,
+            repeat_index=repeat_index,
+            timestamp=datetime.now().isoformat(timespec='seconds'),
+        )
+        return self.result
+
+    def get_response_correct_response_pairs(self):
+        if self.result is None:
+            raise ValueError("Benchmark has not been run yet. Call run_benchmark() first.")
+        return self.result.get_response_correct_pairs()
+
+
+if __name__ == "__main__":
+    from benchmark_io import generate_prompts_from_directory
+
+    tasks = generate_prompts_from_directory("./benchmark_redux/tasks")
+    runner = BenchmarkRunner(model='gemma3', tasks=tasks)
+    result = runner.run_benchmark()
+
+    for response, correct_answer in result.get_response_correct_pairs():
+        print(f'Response:       {response}')
+        print(f'Correct Answer: {correct_answer}\n')
+

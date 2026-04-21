@@ -1,0 +1,7 @@
+object,direction,rotationamount,rotationaxis,correct_answer
+arrow,right,90,clockwise,down
+arrow,left,270,counterclockwise,up
+person,left,180,clockwise,right
+person,down,90,counterclockwise,right
+car,east,180,clockwise,west
+airplane,northwest,270,counterclockwise,northeast

@@ -1,0 +1,1331 @@
+average_score: 0.5952380952380952
+model: gemma4
+repeat: 3
+results:
+- model: gemma4
+  repeat_index: 0
+  task_results:
+  - response: down
+    task:
+      correct_answer: down
+      prompt: if an arrow facing right is rotated 90 clockwise, which direction is
+        it now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: ne
+    task:
+      correct_answer: up
+      prompt: if an arrow facing left is rotated 270 counterclockwise, which direction
+        is it now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: right
+    task:
+      correct_answer: right
+      prompt: if an person facing left is rotated 180 clockwise, which direction is
+        it now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: right
+    task:
+      correct_answer: right
+      prompt: if an person facing down is rotated 90 counterclockwise, which direction
+        is it now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: west
+    task:
+      correct_answer: west
+      prompt: if an car facing east is rotated 180 clockwise, which direction is it
+        now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: southeast
+    task:
+      correct_answer: northeast
+      prompt: if an airplane facing northwest is rotated 270 counterclockwise, which
+        direction is it now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: 'yes'
+    task:
+      correct_answer: 'no'
+      prompt: Using standard 3D axis nomenclature, if a car on a road is rotated about
+        its forward axis 180 degrees, can it still be driven?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'no'
+    task:
+      correct_answer: 'yes'
+      prompt: Using standard 3D axis nomenclature, if a airplane on a sky is rotated
+        about its backward axis 180 degrees, can it still be flown?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'yes'
+    task:
+      correct_answer: 'no'
+      prompt: Using standard 3D axis nomenclature, if a laptop on a desk is rotated
+        about its left-right axis 90 degrees, can it still be used?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'yes'
+    task:
+      correct_answer: 'no'
+      prompt: Using standard 3D axis nomenclature, if a book on a table is rotated
+        about its forward axis 180 degrees, can it still be read?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'yes'
+    task:
+      correct_answer: 'yes'
+      prompt: Using standard 3D axis nomenclature, if a cell phone on a table is rotated
+        about its backward axis 180 degrees, can it still be used for calling?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'yes'
+    task:
+      correct_answer: 'yes'
+      prompt: Using standard 3D axis nomenclature, if a stool on a floor is rotated
+        about its left-right axis 270 degrees, can it still be sat on?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'no'
+    task:
+      correct_answer: 'no'
+      prompt: Using standard 3D axis nomenclature, if a bottle on a countertop is
+        rotated about its forward axis 180 degrees, can it still be opened?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'yes'
+    task:
+      correct_answer: 'no'
+      prompt: Using standard 3D axis nomenclature, if a skateboard on a ramp is rotated
+        about its left-right axis 90 degrees, can it still be ridden?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  timestamp: '2026-04-21T19:53:52'
+- model: gemma4
+  repeat_index: 1
+  task_results:
+  - response: down
+    task:
+      correct_answer: down
+      prompt: if an arrow facing right is rotated 90 clockwise, which direction is
+        it now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: up
+    task:
+      correct_answer: up
+      prompt: if an arrow facing left is rotated 270 counterclockwise, which direction
+        is it now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: right
+    task:
+      correct_answer: right
+      prompt: if an person facing left is rotated 180 clockwise, which direction is
+        it now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: east
+    task:
+      correct_answer: right
+      prompt: if an person facing down is rotated 90 counterclockwise, which direction
+        is it now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: west
+    task:
+      correct_answer: west
+      prompt: if an car facing east is rotated 180 clockwise, which direction is it
+        now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: southeast
+    task:
+      correct_answer: northeast
+      prompt: if an airplane facing northwest is rotated 270 counterclockwise, which
+        direction is it now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: 'yes'
+    task:
+      correct_answer: 'no'
+      prompt: Using standard 3D axis nomenclature, if a car on a road is rotated about
+        its forward axis 180 degrees, can it still be driven?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'yes'
+    task:
+      correct_answer: 'yes'
+      prompt: Using standard 3D axis nomenclature, if a airplane on a sky is rotated
+        about its backward axis 180 degrees, can it still be flown?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'yes'
+    task:
+      correct_answer: 'no'
+      prompt: Using standard 3D axis nomenclature, if a laptop on a desk is rotated
+        about its left-right axis 90 degrees, can it still be used?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'no'
+    task:
+      correct_answer: 'no'
+      prompt: Using standard 3D axis nomenclature, if a book on a table is rotated
+        about its forward axis 180 degrees, can it still be read?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'yes'
+    task:
+      correct_answer: 'yes'
+      prompt: Using standard 3D axis nomenclature, if a cell phone on a table is rotated
+        about its backward axis 180 degrees, can it still be used for calling?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'yes'
+    task:
+      correct_answer: 'yes'
+      prompt: Using standard 3D axis nomenclature, if a stool on a floor is rotated
+        about its left-right axis 270 degrees, can it still be sat on?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'yes'
+    task:
+      correct_answer: 'no'
+      prompt: Using standard 3D axis nomenclature, if a bottle on a countertop is
+        rotated about its forward axis 180 degrees, can it still be opened?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'no'
+    task:
+      correct_answer: 'no'
+      prompt: Using standard 3D axis nomenclature, if a skateboard on a ramp is rotated
+        about its left-right axis 90 degrees, can it still be ridden?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  timestamp: '2026-04-21T19:53:57'
+- model: gemma4
+  repeat_index: 2
+  task_results:
+  - response: down
+    task:
+      correct_answer: down
+      prompt: if an arrow facing right is rotated 90 clockwise, which direction is
+        it now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: up
+    task:
+      correct_answer: up
+      prompt: if an arrow facing left is rotated 270 counterclockwise, which direction
+        is it now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: right
+    task:
+      correct_answer: right
+      prompt: if an person facing left is rotated 180 clockwise, which direction is
+        it now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: east
+    task:
+      correct_answer: right
+      prompt: if an person facing down is rotated 90 counterclockwise, which direction
+        is it now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: west
+    task:
+      correct_answer: west
+      prompt: if an car facing east is rotated 180 clockwise, which direction is it
+        now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: southeast
+    task:
+      correct_answer: northeast
+      prompt: if an airplane facing northwest is rotated 270 counterclockwise, which
+        direction is it now facing?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: up, right, left, down, east, west, north, south, northwest, northeast,
+        southwest, southeast
+
+        '
+      tags:
+      - 2d
+      - rotation
+      - single
+      task_name: 2d_rotations_single
+  - response: 'yes'
+    task:
+      correct_answer: 'no'
+      prompt: Using standard 3D axis nomenclature, if a car on a road is rotated about
+        its forward axis 180 degrees, can it still be driven?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'yes'
+    task:
+      correct_answer: 'yes'
+      prompt: Using standard 3D axis nomenclature, if a airplane on a sky is rotated
+        about its backward axis 180 degrees, can it still be flown?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'yes'
+    task:
+      correct_answer: 'no'
+      prompt: Using standard 3D axis nomenclature, if a laptop on a desk is rotated
+        about its left-right axis 90 degrees, can it still be used?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'no'
+    task:
+      correct_answer: 'no'
+      prompt: Using standard 3D axis nomenclature, if a book on a table is rotated
+        about its forward axis 180 degrees, can it still be read?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'yes'
+    task:
+      correct_answer: 'yes'
+      prompt: Using standard 3D axis nomenclature, if a cell phone on a table is rotated
+        about its backward axis 180 degrees, can it still be used for calling?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'yes'
+    task:
+      correct_answer: 'yes'
+      prompt: Using standard 3D axis nomenclature, if a stool on a floor is rotated
+        about its left-right axis 270 degrees, can it still be sat on?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'no'
+    task:
+      correct_answer: 'no'
+      prompt: Using standard 3D axis nomenclature, if a bottle on a countertop is
+        rotated about its forward axis 180 degrees, can it still be opened?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  - response: 'yes'
+    task:
+      correct_answer: 'no'
+      prompt: Using standard 3D axis nomenclature, if a skateboard on a ramp is rotated
+        about its left-right axis 90 degrees, can it still be ridden?
+      scoring_functions:
+      - binary_match
+      system_prompt: 'Answer the following question(s) exclusively with a single answer
+        from the answer bank.
+
+        Nothing else should be included in your response.
+
+
+        Answer Bank: yes, no
+
+        '
+      tags:
+      - 3d
+      - rotation
+      - single
+      - common_sense
+      task_name: 3d_rotations_single_common_sense
+  timestamp: '2026-04-21T19:54:02'
+scores_by_tag:
+  2d:
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  3d:
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  common_sense:
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  rotation:
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  single:
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+total_scores:
+- - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+- - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+- - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 1.0
+    score_function: binary_match
+  - calculated_score: 0.0
+    score_function: binary_match
