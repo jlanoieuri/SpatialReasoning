@@ -47,6 +47,7 @@ def score_results(model_results_list: list[ModelResults]) -> None:
     for model_result in model_results_list:
         scores_by_tag: dict[str, list[Score]] = {}
 
+        per_repeat_scores = []
         for benchmark_result in model_result.results:
             repeat_scores = []
             for task_result in benchmark_result.task_results:
@@ -56,6 +57,15 @@ def score_results(model_results_list: list[ModelResults]) -> None:
                 for tag in task_result.task.tags:
                     scores_by_tag.setdefault(tag, []).extend(scores)
             model_result.total_scores.append(repeat_scores)
+            per_repeat_scores.append(repeat_scores)
+        
+            # Calculate average score for this repeat and print it
+            total_correct = sum(s.calculated_score for s in repeat_scores)
+            total_possible = len(repeat_scores)
+            average_score = total_correct / total_possible if total_possible > 0 else 0.0
+            print(f"Model: {model_result.model}, Repeat: {benchmark_result.repeat_index + 1}, Score: {int(total_correct)} / {total_possible} ({average_score:.1%})")
+            
+
 
         total_correct = sum(s.calculated_score for repeat in model_result.total_scores for s in repeat)
         total_possible = sum(len(repeat) for repeat in model_result.total_scores)
@@ -76,15 +86,27 @@ def display_results(model_results_list: list[ModelResults]) -> None:
         print()
 
 
+def run_full_benchmark(config: BenchmarkConfig) -> None:
+    """Convenience function to run the full benchmark workflow from loading tasks to saving results."""
+    tasks = generate_prompts_from_directory(config.task_directory)
+    tasks = filter_tasks_by_tags(tasks, config.filter_tags)
+    all_results = run_benchmarks(config, tasks)
+    score_results(all_results)
+    save_results(all_results, config.output_directory)
+    display_results(all_results)
+
 # This is just a sample main block to demonstrate how to run the benchmarks. For the full experiment, we'll want to run this in 
 # a more robust way (either CLI with recorded outputs or a notebook with saved results).
 if __name__ == "__main__":
+    #view_saved_results("./benchmark_redux/results")
+
     config = BenchmarkConfig(
-        models=['gemma3', 'gemma4'],
-        repeats=3,
+        models=['gemma4'],
+        repeats=1,
         task_directory="./benchmark_redux/tasks",
         output_directory="./benchmark_redux/results",
         filter_tags=[],  # empty = run all tasks; e.g. ['2d'] to filter by tag
+        think=False
     )
 
     tasks = generate_prompts_from_directory(config.task_directory)

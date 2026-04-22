@@ -1,0 +1,5 @@
+model,average_accuracy,repeat_0,repeat_1,repeat_2,repeat_3,repeat_4,tag_2d,tag_2d_rotation_single,tag_3d,tag_3d_rotations_multi_die,tag_3d_rotations_single_common_sense,tag_common_sense,tag_die,tag_multi_transformation,tag_rotation,tag_single_transformation
+gemma3,0.3294,0.3529,0.2941,0.3529,0.3529,0.2941,0.3333,0.3333,0.3273,0.0000,0.4500,0.4500,0.0000,0.0000,0.3294,0.4000
+gemma4:26b,0.7176,0.7059,0.7059,0.7647,0.7059,0.7059,1.0000,1.0000,0.5636,0.3333,0.6500,0.6500,0.3333,0.3333,0.7176,0.8000
+gemma4:e2b,0.3529,0.3529,0.3529,0.4118,0.2941,0.3529,0.5000,0.5000,0.2727,0.0000,0.3750,0.3750,0.0000,0.0000,0.3529,0.4286
+gemma4:e4b,0.4824,0.4706,0.4706,0.5294,0.4706,0.4706,0.7667,0.7667,0.3273,0.0000,0.4500,0.4500,0.0000,0.0000,0.4824,0.5857

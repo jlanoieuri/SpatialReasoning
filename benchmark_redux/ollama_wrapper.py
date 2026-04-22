@@ -24,7 +24,9 @@ class ModelQuery:
                     'role': self.role,
                     'content': content,
                 },
-            ], think=self.think)
+            ],
+            stream=False, 
+            think=self.think)
             self.responses.append(response)
 
 

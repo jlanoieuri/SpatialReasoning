@@ -1,0 +1,4 @@
+starting_state,transformations,correct_answer
+"{Front: 1, Back: 6, Up: 4, Down: 3, Left: 2, Right: 5}","{rotate front face 90 degrees counterclockwise}","{Front: 1, Back: 6, Up: 5, Down: 2, Left: 4, Right: 3}"
+"{Front: 3, Back: 4, Up: 5, Down: 2, Left: 1, Right: 6}","{rotate top face 180 degrees, rotate right face 90 degrees clockwise}","{Front: 2, Back: 5, Up: 4, Down: 3, Left: 6, Right: 1}"
+"{Front: 2, Back: 5, Up: 6, Down: 1, Left: 3, Right: 4}","{rotate right face 90 degrees clockwise, rotate top face 90 degrees counterclockwise, rotate front face 180 degrees}","{Front: 3, Back: 4, Up: 5, Down: 2, Left: 1, Right: 6}"

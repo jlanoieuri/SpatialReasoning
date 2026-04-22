@@ -13,6 +13,7 @@ To Add New Scoring Functions:
 
 
 
+# TODO: Expand these with more complex scoring functions and have them take in the entire task result for more context
 
 def binary_match_score(pred, target):
     """A simple scoring function that returns 1.0 if the prediction exactly matches the target (after stripping whitespace, lowercasing, 
