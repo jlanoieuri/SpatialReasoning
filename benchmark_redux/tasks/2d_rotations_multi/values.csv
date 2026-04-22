@@ -1,0 +1,5 @@
+object,direction,transformation,correct_answer
+arrow,up,rotated clockwise 90 degrees then 180 degrees clockwise,left
+arrow,left,rotated clockwise 180 degrees then counterclockwise 180 degrees,left
+boat,north,rotated clockwise 45 degrees then clockwise 45 degrees,east
+car,southwest,rotated counterclockwise 180 degrees then counterclockwise 45 degrees,north

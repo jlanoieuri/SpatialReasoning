@@ -2,6 +2,7 @@ from benchmark_runner import BenchmarkRunner
 from benchmark_io import generate_prompts_from_directory, filter_tasks_by_tags, save_results, view_saved_results
 from benchmark_scoring import score_prediction
 from benchmark_types import BenchmarkResult, Score
+from benchmark_validation import validate_benchmark
 
 from dataclasses import dataclass, field
 
@@ -10,6 +11,7 @@ from dataclasses import dataclass, field
 class BenchmarkConfig:
     """Configuration for running benchmarks, including which models to test, how many repeats, where to find tasks, and where to save results."""
     models: list[str]
+    model_aliases: dict[str, str]   # optional mapping of model names to display aliases
     repeats: int
     task_directory: str
     output_directory: str = "./benchmark_redux/results"
@@ -32,9 +34,10 @@ def run_benchmarks(config: BenchmarkConfig, tasks: list) -> list[ModelResults]:
     """Run each model for the configured number of repeats and return ModelResults."""
     all_results = []
     for model in config.models:
-        cur_model_results = ModelResults(model=model, repeat=config.repeats, results=[], total_scores=[], average_score=0.0)
+        model_name = config.model_aliases.get(model, model) if config.model_aliases else model
+        cur_model_results = ModelResults(model=model_name, repeat=config.repeats, results=[], total_scores=[], average_score=0.0)
         for repeat in range(config.repeats):
-            print(f"Running benchmark for model: {model}, Repeat: {repeat + 1}/{config.repeats}")
+            print(f"Running benchmark for model: {model_name}, Repeat: {repeat + 1}/{config.repeats}")
             runner = BenchmarkRunner(model=model, tasks=tasks)
             result = runner.run_benchmark(repeat_index=repeat, think=config.think)
             cur_model_results.results.append(result)
@@ -90,9 +93,11 @@ def run_full_benchmark(config: BenchmarkConfig) -> None:
     """Convenience function to run the full benchmark workflow from loading tasks to saving results."""
     tasks = generate_prompts_from_directory(config.task_directory)
     tasks = filter_tasks_by_tags(tasks, config.filter_tags)
+    if not validate_benchmark(config, tasks):
+        raise ValueError("Benchmark validation failed. Please fix the errors above before running the benchmark.")
     all_results = run_benchmarks(config, tasks)
     score_results(all_results)
-    save_results(all_results, config.output_directory)
+    save_results(all_results, config.output_directory, config.model_aliases)
     display_results(all_results)
 
 # This is just a sample main block to demonstrate how to run the benchmarks. For the full experiment, we'll want to run this in 

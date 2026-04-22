@@ -74,12 +74,14 @@ def filter_tasks_by_tags(tasks: list, tags: list) -> list:
     return [t for t in tasks if any(tag in t.tags for tag in tags)]
 
 
-def save_results(model_results_list: list, output_dir: str) -> None:
+def save_results(model_results_list: list, output_dir: str, model_aliases: dict[str, str] = None) -> None:
     """Serialize each ModelResults to a timestamped YAML file under {output_dir}/{model}/."""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     for model_results in model_results_list:
+        # use alias if provided
+        model_name = model_aliases.get(model_results.model, model_results.model) if model_aliases else model_results.model
         # remove invalid path characters from model name for directory naming
-        safe_model_name = "".join(c for c in model_results.model if c.isalnum() or c in (" ", ".", "_")).rstrip()
+        safe_model_name = "".join(c for c in model_name if c.isalnum() or c in (" ", ".", "_")).rstrip()
         safe_model_name = safe_model_name.replace(":", "_")
         model_dir = os.path.join(output_dir, safe_model_name)
         os.makedirs(model_dir, exist_ok=True)
