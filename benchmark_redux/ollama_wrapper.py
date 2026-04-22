@@ -4,12 +4,13 @@ from dataclasses import dataclass
 
 
 class ModelQuery:
-    def __init__(self, model: str = 'gemma3', system_prompt: str = 'You are a helpful assistant.', role: str = 'user', prompt_content: list = None):
+    def __init__(self, model: str = 'gemma3', system_prompt: str = 'You are a helpful assistant.', role: str = 'user', prompt_content: list = None, think: bool = False):
         self.model: str = model
         self.system_prompt: str = system_prompt
         self.role: str = role
         self.prompt_content: list = prompt_content if prompt_content is not None else ['Why is the sky blue', 'What is the meaning of life?']
         self.responses: list = None
+        self.think: bool = think
 
     def run_query(self):
         self.responses = []
@@ -23,7 +24,7 @@ class ModelQuery:
                     'role': self.role,
                     'content': content,
                 },
-            ], think=False)
+            ], think=self.think)
             self.responses.append(response)
 
 

@@ -14,6 +14,7 @@ class BenchmarkConfig:
     task_directory: str
     output_directory: str = "./benchmark_redux/results"
     filter_tags: list[str] = field(default_factory=list)
+    think: bool = False  # whether to use "think" mode for model queries (if supported by the API)
 
 
 @dataclass
@@ -35,7 +36,7 @@ def run_benchmarks(config: BenchmarkConfig, tasks: list) -> list[ModelResults]:
         for repeat in range(config.repeats):
             print(f"Running benchmark for model: {model}, Repeat: {repeat + 1}/{config.repeats}")
             runner = BenchmarkRunner(model=model, tasks=tasks)
-            result = runner.run_benchmark(repeat_index=repeat)
+            result = runner.run_benchmark(repeat_index=repeat, think=config.think)
             cur_model_results.results.append(result)
         all_results.append(cur_model_results)
     return all_results
@@ -79,7 +80,7 @@ def display_results(model_results_list: list[ModelResults]) -> None:
 # a more robust way (either CLI with recorded outputs or a notebook with saved results).
 if __name__ == "__main__":
     config = BenchmarkConfig(
-        models=['gemma4'],
+        models=['gemma3', 'gemma4'],
         repeats=3,
         task_directory="./benchmark_redux/tasks",
         output_directory="./benchmark_redux/results",

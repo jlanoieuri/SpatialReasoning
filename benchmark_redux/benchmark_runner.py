@@ -11,7 +11,7 @@ class BenchmarkRunner:
         self.tasks: List[Task] = tasks or []
         self.result: BenchmarkResult = None
 
-    def run_benchmark(self, repeat_index: int = 0) -> BenchmarkResult:
+    def run_benchmark(self, repeat_index: int = 0, think: bool = False) -> BenchmarkResult:
         task_results = []
         for task in self.tasks:
             query = ModelQuery(
@@ -19,6 +19,7 @@ class BenchmarkRunner:
                 system_prompt=task.system_prompt,
                 role='user',
                 prompt_content=[task.prompt],
+                think=think
             )
             query.run_query()
             response_text = query.responses[0].message.content
