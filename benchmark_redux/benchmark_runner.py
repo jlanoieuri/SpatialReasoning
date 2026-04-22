@@ -5,6 +5,7 @@ from benchmark_types import Task, TaskResult, BenchmarkResult
 
 
 class BenchmarkRunner:
+    """Class responsible for running a benchmark for a given model and set of tasks, producing a BenchmarkResult with responses and correct answers."""
     def __init__(self, model: str = 'gemma3', tasks: List[Task] = None):
         self.model = model
         self.tasks: List[Task] = tasks or []
@@ -37,6 +38,7 @@ class BenchmarkRunner:
         return self.result.get_response_correct_pairs()
 
 
+# Example usage/Debugging
 if __name__ == "__main__":
     from benchmark_io import generate_prompts_from_directory
 

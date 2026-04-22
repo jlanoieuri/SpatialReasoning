@@ -119,6 +119,7 @@ def view_saved_results(output_dir: str) -> None:
         print()
 
 
+# Example/Debugging usage
 if __name__ == "__main__":
     directory_path = "./benchmark_redux/tasks"
     tasks = generate_prompts_from_directory(directory_path)

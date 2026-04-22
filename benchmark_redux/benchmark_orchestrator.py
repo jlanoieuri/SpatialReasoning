@@ -8,6 +8,7 @@ from dataclasses import dataclass, field
 
 @dataclass
 class BenchmarkConfig:
+    """Configuration for running benchmarks, including which models to test, how many repeats, where to find tasks, and where to save results."""
     models: list[str]
     repeats: int
     task_directory: str
@@ -17,6 +18,7 @@ class BenchmarkConfig:
 
 @dataclass
 class ModelResults:
+    """Results for a single model across all repeats, including calculated scores and averages."""
     model: str
     repeat: int
     results: list[BenchmarkResult]
@@ -73,6 +75,8 @@ def display_results(model_results_list: list[ModelResults]) -> None:
         print()
 
 
+# This is just a sample main block to demonstrate how to run the benchmarks. For the full experiment, we'll want to run this in 
+# a more robust way (either CLI with recorded outputs or a notebook with saved results).
 if __name__ == "__main__":
     config = BenchmarkConfig(
         models=['gemma4'],
