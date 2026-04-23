@@ -1,4 +1,4 @@
-cstarting_state,transformations,reference
+starting_state,transformations,reference
 "{Front: 4, Back: 3, Top: 5, Bottom: 2, Left: 6, Right: 1}","{rotate front face 180 degrees counterclockwise, rotate top face -180 degrees counterclockwise, rotate front face 270 degrees clockwise}","{Front: 3, Back: 4, Top: 1, Bottom: 6, Left: 2, Right: 5}"
 "{Front: 6, Back: 1, Top: 2, Bottom: 5, Left: 4, Right: 3}","{rotate right face 270 degrees clockwise}","{Front: 2, Back: 5, Top: 1, Bottom: 6, Left: 4, Right: 3}"
 "{Front: 6, Back: 1, Top: 5, Bottom: 2, Left: 3, Right: 4}","{rotate left face -270 degrees counterclockwise, rotate left face 180 degrees counterclockwise, rotate bottom face -270 degrees counterclockwise, rotate bottom face -270 degrees clockwise, rotate right face -270 degrees counterclockwise}","{Front: 1, Back: 6, Top: 2, Bottom: 5, Left: 3, Right: 4}"
