@@ -1,4 +1,4 @@
-starting_state,transformations,reference,number_of_steps
+starting_state,transformations,correct_answer,number_of_steps
 "Front: 6, Back: 1, Top: 5, Bottom: 2, Left: 3, Right: 4","rotate front face -180 degrees counterclockwise, rotate front face 270 degrees clockwise","Front: 6, Back: 1, Top: 3, Bottom: 4, Left: 2, Right: 5","2"
 "Front: 3, Back: 4, Top: 1, Bottom: 6, Left: 2, Right: 5","rotate right face -90 degrees counterclockwise, rotate top face -270 degrees counterclockwise, rotate back face 90 degrees clockwise","Front: 2, Back: 5, Top: 6, Bottom: 1, Left: 3, Right: 4","3"
 "Front: 3, Back: 4, Top: 6, Bottom: 1, Left: 5, Right: 2","rotate right face -90 degrees clockwise, rotate top face -90 degrees clockwise","Front: 5, Back: 2, Top: 4, Bottom: 3, Left: 1, Right: 6","2"
