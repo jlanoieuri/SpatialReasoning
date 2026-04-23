@@ -46,7 +46,7 @@ def generate_task():
     solution = str(d)
 
 
-    return initial_die_state, steps, solution
+    return initial_die_state, steps, solution, num_steps
 
 # Generate and print the tasks (human readable format)
 # for i in range(NUM_TASKS):
@@ -61,11 +61,11 @@ def generate_task():
 
 # Write the value file headers to the values file
 with open(OUTPUT_FILE, "w") as output_file:
-    output_file.write("starting_state,transformations,reference\n")  # Write header
+    output_file.write("starting_state,transformations,reference,number_of_steps\n")  # Write header
 
 # Generate the tasks and write them to the values file
 with open(OUTPUT_FILE, "a") as output_file:
     for i in range(NUM_TASKS):
-        initial_state, steps, solution = generate_task()
+        initial_state, steps, solution, num_steps = generate_task()
         steps_str = ", ".join([f"rotate {step[0]} face {step[1]} degrees {step[2]}" for step in steps])
-        output_file.write(f"\"{{{initial_state}}}\",\"{{{steps_str}}}\",\"{{{solution}}}\"\n")
+        output_file.write(f"\"{initial_state}\",\"{steps_str}\",\"{solution}\",\"{num_steps}\"\n")
