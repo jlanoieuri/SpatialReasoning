@@ -2,10 +2,10 @@ import random
 import die
 
 # File to write the generated tasks to
-OUTPUT_FILE = "./SpatialReasoning/benchmark/tasks/rotate_die/values.csv"
+OUTPUT_FILE = "../benchmark/tasks/rotate_die/values.csv"
 
 # Number of tasks to generate
-NUM_TASKS = 100
+NUM_TASKS = 30
 
 # Minimum and maximum number of steps in a task
 MIN_STEPS = 1
