@@ -4,7 +4,7 @@ import die
 # File to write the generated tasks to
 OUTPUT_FILE = "../benchmark/tasks/rotate_die/values.csv"
 
-# Number of tasks to generate
+# Number of each task with each number of steps to generate
 NUM_TASKS = 30
 
 # Minimum and maximum number of steps in a task
@@ -22,15 +22,12 @@ DIRECTIONS = ['clockwise', 'counterclockwise']
 
 
 # Function to generate a random die rotation task of random number of steps (between 1 and n)
-def generate_task():
+def generate_task(num_steps):
     # Create a new random die
     d = die.Die()
 
     # Get initial state of the die
     initial_die_state = str(d)
-
-    # Generate a random number of steps for the task
-    num_steps = random.randint(MIN_STEPS, MAX_STEPS)
 
     # Generate the steps for the task
     steps = []
@@ -65,7 +62,8 @@ with open(OUTPUT_FILE, "w") as output_file:
 
 # Generate the tasks and write them to the values file
 with open(OUTPUT_FILE, "a") as output_file:
-    for i in range(NUM_TASKS):
-        initial_state, steps, solution, num_steps = generate_task()
-        steps_str = ", ".join([f"rotate {step[0]} face {step[1]} degrees {step[2]}" for step in steps])
-        output_file.write(f"\"{initial_state}\",\"{steps_str}\",\"{solution}\",\"{num_steps}\"\n")
+    for num_steps in range(MIN_STEPS, MAX_STEPS + 1):
+        for i in range(NUM_TASKS):
+            initial_state, steps, solution, num_steps = generate_task(num_steps)
+            steps_str = ", ".join([f"rotate {step[0]} face {step[1]} degrees {step[2]}" for step in steps])
+            output_file.write(f"\"{initial_state}\",\"{steps_str}\",\"{solution}\",\"{num_steps}\"\n")
